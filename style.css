@@ -19,7 +19,19 @@
     text-decoration: none;
 }
 
+.navbar ul {
+  display: flex;
+  gap: 20px;
+}
+
+
 /* Featured Video Styling */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
 .video-card.featured {
   grid-column: span 2; /* takes more space on larger screens */
   background: #f8f8f8;
