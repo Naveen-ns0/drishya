@@ -13,17 +13,70 @@
     align-items: center;
 }
 
-.nav ul {
-    color: white;
-    margin-left: 15px;
-    text-decoration: none;
+/* Navbar Base */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #202020;
+  padding: 10px 20px;
 }
 
-.navbar ul {
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Nav links (desktop) */
+.nav-links {
+  list-style: none;
   display: flex;
   gap: 20px;
 }
 
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.nav-links li a:hover {
+  color: #ff0000;
+}
+
+/* Hide toggle button on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive - Mobile View */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    background: #202020;
+    position: absolute;
+    top: 60px; /* below navbar */
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links.show {
+    display: flex; /* visible when toggle is active */
+  }
+
+  .menu-toggle {
+    display: block; /* show hamburger */
+  }
+}
 
 /* Featured Video Styling */
 
