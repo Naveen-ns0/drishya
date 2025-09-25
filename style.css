@@ -19,16 +19,23 @@ nav a {
     text-decoration: none;
 }
 
-.video-grid {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
+/* Featured Video Styling */
+.video-card.featured {
+  grid-column: span 2; /* takes more space on larger screens */
+  background: #f8f8f8;
+  border: 2px solid #ff0000; /* highlight border */
 }
 
-.video-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 300px;
+.video-card.featured h2 {
+  margin: 10px;
+  font-size: 20px;
+  color: #202020;
+}
+
+.video-card.featured p {
+  margin: 0 10px 10px;
+  color: #555;
+  font-size: 14px;
 }
 
 footer {
